@@ -1,0 +1,78 @@
+html {
+    font-family: "century-gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.color-box {
+    width: 100px; height: 100px;
+}
+#box_1 {
+    background-color: #284B63;
+}
+#box_2 {
+    background-color: #D9D9D9;
+    outline-color: #353535;
+    outline: auto;
+}
+#box_3 {
+    background-color: #FFFFFF;
+    outline-color: #353535;
+    outline: auto;
+}
+#box_4 {
+    background-color: #3C6E71;
+}
+#box_5 {
+    background-color: #353535;
+}
+p {
+    font-size: 16px;
+    color: #353535;
+}
+.small_text {
+    font-size: 12px;
+    color: #353535;
+}
+h3 {
+    font-size: 20px;
+    color: #353535;
+}
+h2 {
+    font-size: 24px;
+    color: #3C6E71;
+}
+h1 {
+    font-size: 28px;
+    color: #284B63;
+}
+a {
+    text-decoration: none;
+    color: #284B63; 
+}
+#box_text {
+    text-align: center;
+}
+a:hover {
+    text-decoration: underline;
+    color: #3C6E71;
+}
+a:visited {
+    color: #3C6E71;
+}
+.NavBar a:hover {
+    color: #3C6E71;
+}
+.NavBar a:visited {
+    color: #284B63;
+}
+.NavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+}
+.NavBar li {
+    display: inline-block;
+    margin-right: 10px;
+}
