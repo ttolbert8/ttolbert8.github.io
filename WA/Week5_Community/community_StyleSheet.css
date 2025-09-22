@@ -1,0 +1,49 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+.nav-menu {
+    list-style: none;
+    display: none;
+    gap: 2em;
+}
+.nav-menu.show {
+    display: flex;
+}
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        flex-direction: column;
+    }
+    .nav-toggle:hover {
+        background-color: blue;
+    }
+    .nav-menu.hide {
+        display: none;
+    }
+    .nav-menu.show {
+        position: absolute;
+        top: 90px;
+        right: 0px;
+        height: 200px;
+        width: 150px;
+
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        background-color: lightgray;
+        padding: 5px;
+    }
+    .hamburger {
+        background-color: black;
+        height: 6px;
+        width: 40px;
+        padding: 0;
+        margin: 3px;
+    }
+}
