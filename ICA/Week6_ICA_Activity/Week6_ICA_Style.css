@@ -1,0 +1,25 @@
+.gallery-container { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas: 
+        "header1 header2"
+        "nav sidebar1"
+        "main sidebar2";
+    }
+.gallery-grid { 
+    grid-area: main;
+ }
+.photo-card { 
+    grid-area: sidebar1 ;
+}
+.gallery-header {
+    grid-area: header1;
+}
+.gallery-sidebar {
+    grid-area: sidebar2;
+}
+img {
+    width: 15rem;
+    height: 10rem;
+}
