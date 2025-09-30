@@ -85,3 +85,11 @@ function filterPhotos(category) {
       }
     });
   }
+  // Save language choice
+function setLanguage(lang) {
+  localStorage.setItem('userLanguage', lang);
+  // Update page content based on language
+}
+
+// Load on page visit
+const userLang = localStorage.getItem('userLanguage') || 'en';
