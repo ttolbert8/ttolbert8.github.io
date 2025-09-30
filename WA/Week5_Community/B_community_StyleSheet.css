@@ -1,0 +1,118 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+.nav-menu {
+    list-style: none;
+    display: none;
+    gap: 2em;
+}
+.nav-menu.show {
+    display: flex;
+}
+/* HomePage */
+.homepage-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "header about"
+        "upcoming-games schedule"
+}
+.header {
+    grid-area: header;
+}
+.schedule {
+    grid-area: schedule;
+}
+.about {
+    grid-area: about;
+}
+.clinics {
+    grid-area: clinics;
+}
+p {
+    text-align: center;
+}
+/* Resources Page */
+.equipment-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "helmet shoulder-pads"
+        "cleats girdle"
+}
+.helmets {
+    grid-area: helmet;
+}
+.shoulder-pads {
+    grid-area: shoulder-pads;
+}
+.cleats {
+    grid-area: cleats;
+}
+.girdle {
+    grid-area: girdle;
+}
+.resource-picture {
+    display: block;
+    margin: auto;
+}
+/* Gallery */
+.picture-gallery-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+}
+.gallery-header-container {
+    display: grid;
+    padding-top: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas: 
+        "header1 header2"
+        "nav sidebar1"
+        "main sidebar2";
+}
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        flex-direction: column;
+    }
+    .nav-toggle:hover {
+        background-color: blue;
+    }
+    .nav-menu.hide {
+        display: none;
+    }
+    .nav-menu.show {
+        position: absolute;
+        top: 90px;
+        right: 0px;
+        height: 200px;
+        width: 150px;
+
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        background-color: lightgray;
+        padding: 5px;
+    }
+    .hamburger {
+        background-color: black;
+        height: 6px;
+        width: 40px;
+        padding: 0;
+        margin: 3px;
+    }
+}
+img {
+    width: 15rem;
+    height: 10rem;
+}
