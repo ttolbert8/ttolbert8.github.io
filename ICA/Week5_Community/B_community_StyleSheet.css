@@ -87,19 +87,11 @@ html {
 .about {
     grid-area: about;
 }
-.upcoming-games {
-    grid-area: upcoming-games;
-    display: flex;
-    background-color: lightgray;
-    border: 10% blue;
-    justify-content: center;
-    flex-direction: column;
+.clinics {
+    grid-area: clinics;
 }
 p {
     text-align: center;
-    font-family: "helvetica-lt-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
 /* Resources Page */
 .equipment-container {
@@ -114,31 +106,19 @@ p {
     grid-area: helmet;
 }
 .shoulder-pads {
-    display: flex;
     grid-area: shoulder-pads;
 }
 .cleats {
-    display: flex;
     grid-area: cleats;
 }
 .girdle {
-    display: flex;
-    flex-direction: column;
     grid-area: girdle;
-}
-.girdle-header {
-    justify-content: center;
-}
-#girdle-picture {
-    scale: 70%;
 }
 .resource-picture {
     display: block;
     margin: auto;
 }
-
-/* GALLERY */
-
+/* Gallery */
 .picture-gallery-container {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
@@ -154,8 +134,57 @@ p {
         "nav sidebar1"
         "main sidebar2";
 }
+/* Dark Theme */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-img {
-    width: 15rem;
-    height: 10rem;
+.nav-menu a {
+    color: black;
 }
+
+.theme-button {
+    background: #f0f0f0;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #000;
+    color: #fff;
+}
+/*
+body.dark-theme .main-nav {
+    background-color: #111;
+}
+
+body.dark-theme .nav-menu a {
+    color: #ffcc00; 
+}
+
+body.dark-theme .theme-button {
+    background: #333;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Optional tweaks for specific sections 
+body.dark-theme .schedule-filter button {
+    background: #222;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+body.dark-theme .team-schedule {
+    background: #111;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 8px;
+}
+*/

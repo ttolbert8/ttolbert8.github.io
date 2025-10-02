@@ -85,11 +85,31 @@ function filterPhotos(category) {
       }
     });
   }
-  // Save language choice
-function setLanguage(lang) {
-  localStorage.setItem('userLanguage', lang);
-  // Update page content based on language
+
+let btn = document.querySelector('#theme-button').addEventListener('click', theme);
+
+function theme() {
+  console.log('theme works');
+  setTheme('light');
 }
 
-// Load on page visit
-const userLang = localStorage.getItem('userLanguage') || 'en';
+// Save user's theme choice
+function setTheme(theme) {
+  let inTheme = theme;
+  if (inTheme == 'dark-theme') {
+    theme = 'light';
+  }
+  else {
+    theme = 'dark';
+  }
+  localStorage.setItem('userTheme', theme);
+  document.body.className = theme;
+
+}
+
+// Load saved theme on page load
+window.addEventListener('load', function() {
+  const savedTheme = localStorage.getItem('userTheme') || 'light';
+  document.body.className = savedTheme;
+});
+
