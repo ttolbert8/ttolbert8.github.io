@@ -94,6 +94,8 @@ function theme() {
 }
 
 // Save user's theme choice
+// This data is necessary to ensure that users don't have to switch their theme to dark every time. Saving them time during their visit and allowing for easier use
+// Could add a popup that allows users to turn off the data collection feature
 function setTheme(theme) {
   let inTheme = theme;
   if (inTheme == 'dark-theme') {
