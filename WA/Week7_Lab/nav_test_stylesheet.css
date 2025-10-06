@@ -1,0 +1,12 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgrey;
+}
+.nav-menu {
+    list-style: none;
+    gap: 2em;
+}
+.nav-toggle {
+    display: none;
+}

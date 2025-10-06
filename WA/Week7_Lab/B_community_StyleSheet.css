@@ -187,3 +187,24 @@ img {
     width: 15rem;
     height: 10rem;
 }
+/* CONTACT */
+.contact-forms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-areas: 
+    "parent alumni"
+    ;
+}
+.parent-contact-container {
+    grid-area: parent;
+    display: flex;
+    flex-direction: column;
+}
+.alumni-contact-container {
+    grid-area: alumni;
+    display: flex;
+    flex-direction: column;
+}
+.contact-description {
+    text-align: left;
+}
