@@ -77,12 +77,26 @@ function filterSchedule(category) {
     selectMessage.style.display = 'none';
   }
 
-  // Save form data as user types
-document.getElementById('myForm').addEventListener('input', function(e) {
-  localStorage.setItem('formData', JSON.stringify({
-      [e.target.name]: e.target.value
-  }));
-});
+// Save form data
+function saveFormData() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  localStorage.setItem('userName', name);
+  localStorage.setItem('userEmail', email);
+}
 
-// Restore form data on page load
-const savedData = JSON.parse(localStorage.getItem('formData') || '{}');
+// Load form data
+function loadFormData() {
+  const name = localStorage.getItem('userName');
+  const email = localStorage.getItem('userEmail');
+  if (name) {
+      document.getElementById('name').value = name;
+  }
+  if (email) {
+      document.getElementById('email').value = email;
+  }
+}
+
+// Attach event listeners
+document.addEventListener('DOMContentLoaded', loadFormData);
+document.getElementById('myForm').addEventListener('submit', saveFormData);
