@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="B_community_StyleSheet.css"> 
-    <link rel="stylesheet" href="https://use.typekit.net/umm0myu.css">
+    <link rel="stylesheet" href="B_community_StyleSheet.css">
+    <link rel="stylesheet" href="https://use.typekit.net/umm0myu.css"> 
     <script src="B_community.js" defer></script>
 </head>
 <body>
@@ -17,57 +17,30 @@
             <span class="hamburger"></span>
         </button>
         <ul class="nav-menu">
-            <li><a class="nav-text" href="A_Community.html">Home</a></li>
-            <li><a class="nav-text" href="A_resources">Resources</a></li>
-            <li><a class="nav-text" href="A_Gallery.html">Picture Gallery</a></li>
-            <li><a class="nav-text" href="A_Contact.html">Contact</a></li>
+            <li><button class="nav-button"><a class="nav-text" href="A_Community.html">Home</a></button></li>
+            <li><button class="nav-button"><a class="nav-text" href="A_resources.html">Resources</a></button></li>
+            <li><button class="nav-button"><a class="nav-text" href="A_Gallery.html">Picture Gallery</a></button></li>
+            <li><button class="nav-button"><a class="nav-text" href="A_Contact.html">Contact</a></button></li>
         </ul>
     </nav>
     <main>
-        <header>
-            <h1>Resources</h1>
-        </header>
-        <div class="equipment-container">
-            <div class="helmets">
-                <h3>Helmets</h3>
-                <a href="https://www.dickssportinggoods.com/f/football-helmets-accessories?srsltid=AfmBOopiBz-6voEljUq3f3f4HmylDAObiEikSlzQSc7310JGW2B0SV5P">
-                    <img class="resource-picture" src="pictures/helmet.jpeg" alt="Picture of helmet and link to Dicks Sporting Goods Helmet Selection">
-                </a>
-                <p>
-                A good youth football helmet should balance safety, comfort, and durability, with brands like Riddell, Xenith, and Schutt often leading the way due to their strong safety ratings and customizable fit. 
-                    Look for helmets that feature modern padding technology, lightweight materials, and proper certification to ensure players are well-protected while staying comfortable on the field.
-                </p>
+        <hr class="divider">
+        <div class="resource-card-1">
+            <h1 class="card-header">USA Heads Up Football</h1>
+            <div class="card-content">
+                <img class="card-img" src="Pictures/usa_football.jpeg" alt="heads up football picture with link">
+                <p class="card-description">USA Heads Up Football is a nationwide program developed by USA Football to promote safer and smarter play among youth and high school football players</p>
             </div>
-            <div class="shoulder-pads">
-                <h3>Shoulder Pads</h3>
-                <a href="https://www.dickssportinggoods.com/f/football-shoulder-pads?srsltid=AfmBOooblQUEq80sKZ1zwmZAZWd7exsBrs5NQqrJGTXq0epVp-WZIDwG">
-                    <img class="resource-picture" src="pictures/shoulderpads.jpeg" alt="Picture of shoulder pads and link to Dicks Sporting Goods Helmet Selection">
-                </a>
-                <p>
-                    Youth shoulder pads should provide a balance of protection, mobility, and comfort, with adjustable straps and proper sizing to ensure a secure fit. 
-                    Look for lightweight designs with strong impact absorption to keep players safe without restricting movement.
-                </p>
-            </div>
-            <div class="cleats">
-                <h3 class="cleats-header">Cleats</h3>
-                <a class="cleats-link" href="https://www.dickssportinggoods.com/f/football-helmets-accessories?srsltid=AfmBOopiBz-6voEljUq3f3f4HmylDAObiEikSlzQSc7310JGW2B0SV5P">
-                    <img class="resource-picture" src="pictures/cleats.jpg" alt="Picture of cleats and link to Dicks Sporting Goods Helmet Selection">
-                </a>
-                <p class="cleats-description">
-                    Good youth football cleats offer traction, stability, and comfort, helping young athletes move confidently on grass or turf. 
-                    Choose a pair that fits snugly but comfortably, with durable materials to support quick cuts and sprints.
-                </p>
-            </div class="girdle">
-                <h3 class="girdle-header">Girdles</h3>
-                <a class="girdle-link" href="https://www.dickssportinggoods.com/f/football-helmets-accessories?srsltid=AfmBOopiBz-6voEljUq3f3f4HmylDAObiEikSlzQSc7310JGW2B0SV5P">
-                    <img class="resource-picture" id="girdle-picture" src="pictures/girdle2.jpeg" alt="Picture of girdle and link to Dicks Sporting Goods Helmet Selection">
-                </a>
-                <p class="girdle-description">
-                    A quality youth girdle should feature integrated padding and compression fit to protect hips, thighs, and tailbone during play. 
-                    Prioritize breathable, moisture-wicking fabrics that keep athletes cool while offering reliable impact protection.
-                </p>
-            </div>
+            <button class="card-button"><a class="card-button-text" href="https://www.usafootball.com/coach-certification">Learn More</a></button>
         </div>
-    </main>   
+        <div class="resource-card-1">
+            <h1 class="card-header">Player Equipment Checklist</h1>
+            <div class="card-content">
+                <img class="card-img" src="Pictures/falcons8.jpg" alt="heads up football picture with link">
+                <p class="card-description">Download a comprehensive list of equipment needed to set your child up for success on the field</p>
+            </div>
+            <button class="card-button"><a class="card-button-text" href="Resources/Youth_Football_Equipment_Checklist.pdf">Equipment Shopping List</a></button>
+        </div>
+    </main>
 </body>
 </html>

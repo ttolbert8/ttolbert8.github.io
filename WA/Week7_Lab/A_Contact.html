@@ -18,48 +18,51 @@
             <span class="hamburger"></span>
         </button>
         <ul class="nav-menu">
-            <li><a class="nav-text" href="A_Community.html">Home</a></li>
-            <li><a class="nav-text" href="A_resources.html">Resources</a></li>
-            <li><a class="nav-text" href="A_Gallery.html">Picture Gallery</a></li>
-            <li><a class="nav-text" href="A_Contact.html">Contact</a></li>
+            <li><button class="nav-button"><a class="nav-text" href="A_Community.html">Home</a></button></li>
+            <li><button class="nav-button"><a class="nav-text" href="A_resources.html">Resources</a></button></li>
+            <li><button class="nav-button"><a class="nav-text" href="A_Gallery.html">Picture Gallery</a></button></li>
+            <li><button class="nav-button"><a class="nav-text" href="A_Contact.html">Contact</a></button></li>
         </ul>
     </nav>
-    <main class="contact_forms"> 
-        <div class="parent-contact-container">
-            <div class="parent-contact-desciption">
-                <header><h1>Parent Contact Form</h1></header>
-                <p class="contact-description">Don't miss any updates about the team!</p>
+    <main>
+        <hr class="divider"> 
+        <div class="contact_forms">
+            <div class="parent-contact-container">
+                <div class="parent-contact-desciption">
+                    <header><h1>Parent Contact Form</h1></header>
+                    <p class="contact-description">Don't miss any updates about the team!</p>
+                </div>
+                <form class="Parent_Contact_Form">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="phone_number">Phone Number</label><br>
+                    <input type="tel" id="phone_number" name="phone_number"><br>
+                    <input type="submit">
+                </form>
             </div>
-            <form class="Parent_Contact_Form">
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="phone_number">Phone Number</label><br>
-                <input type="tel" id="phone_number" name="phone_number"><br>
-                <input type="submit">
-            </form>
-        </div>
-        <div class="alumni-contact-container">
-            <div class="alumni-contact-desciption">
-                <header><h1>Alumni Contact Form</h1></header>
-                <p class="contact-description">Don't miss any updates about the team!</p>
+            <div class="alumni-contact-container">
+                <div class="alumni-contact-desciption">
+                    <header><h1>Alumni Contact Form</h1></header>
+                    <p class="contact-description">Don't miss any updates about the team!</p>
+                </div>
+                <form class="alumni_Contact_Form">
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="phone_number">Phone Number</label><br>
+                    <input type="tel" id="phone_number" name="phone_number"><br>
+                    <label for="team_years">Years with team</label><br>
+                    <input type="text" id="team_years" name="team_years" placeholder="1999-2003"><br>
+                    <input type="submit">
+                </form>
             </div>
-            <form class="alumni_Contact_Form">
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="phone_number">Phone Number</label><br>
-                <input type="tel" id="phone_number" name="phone_number"><br>
-                <label for="team_years">Years with team</label><br>
-                <input type="text" id="team_years" name="team_years" placeholder="1999-2003"><br>
-                <input type="submit">
-            </form>
         </div>
     </main>
 </body>
