@@ -1,0 +1,72 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #616163;
+    padding: 10px;
+}
+/* ==== LOADER ANIMATION ==== */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #616163;
+    transition: opacity 1.5s, visibility 1.5s ;
+}
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden; 
+ }
+ .loader::after {
+     content: "";
+     width: 75px;
+     height: 75px;
+     border: 15px solid #fffbfc;
+     border-top-color: #00a9a5;
+     border-radius: 50%;
+     animation: loading 1.5s ease infinite;
+ }
+ @keyframes loading {
+     from{
+         transform: rotate(0turn);
+     }
+     to{
+         transform: rotate(1turn);
+     }
+ }
+/* ==== FORM ANIMATION ==== */
+form {
+    margin: 300px auto 0;
+    max-width: 600px;
+}
+.login-container {
+    width: 100%;
+    position: relative;
+}
+.inp-username {
+    width: 100%;
+    padding: 25px;
+    font-size: 25px;
+    outline: none;
+    background: #616163;
+    color: white;
+    border-radius: 25px;
+    border: 2px solid white;
+}
+label {
+    font-size: 25px;
+    padding-left: 20px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform .3s ease-out, top .3s ease-out;
+}
+
+.login-container:focus-within label {
+    top: -10px;
+    transform: translateY(-100%);
+}

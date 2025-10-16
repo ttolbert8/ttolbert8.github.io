@@ -3,6 +3,43 @@ html {
     font-weight: 400;
     font-style: normal;
 }
+/* ==== LOADER ==== */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fb;
+    transition: opacity 0.75s, visibility .75s ;
+}
+
+.loader-hidden {
+   opacity: 0;
+   visibility: hidden; 
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: blue;
+    border-radius: 50%;
+    animation: loading .75s ease infinite;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
 /* ==== NAV DESIGN ==== */
 
 /* Main Nav Container */
@@ -133,11 +170,13 @@ html {
     grid-area: upcoming-games;
     display: flex;
     background-color: white;
+    /*
     border-radius: 25px;
     border: 2px solid blue;
     padding: 5%;
     justify-content: center;
     flex-direction: column;
+    */
 }
 p {
     text-align: center;
@@ -145,7 +184,7 @@ p {
     font-weight: 400;
     font-style: normal;
 }
-/* Resources Page */
+/* ====RESOURCE PAGE==== */
 .resource-card-1 {
     width: 40rem;
     height: 17.5rem;
@@ -189,7 +228,7 @@ p {
     border: 2px solid black;
     border-radius: 10px; 
 }
-/* GALLERY */
+/* ==== GALLERY ==== */
 
 .picture-gallery-container {
     display: grid;
@@ -211,7 +250,7 @@ img {
     width: 15rem;
     height: 10rem;
 }
-/* CONTACT */
+/* ==== CONTACT ==== */
 .contact-forms {
     display: flex;
     flex-direction: row;
