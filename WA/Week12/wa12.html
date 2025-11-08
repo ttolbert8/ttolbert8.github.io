@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wa10.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ghc3ghz.css">
+    <script src="wa10.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="search-container">
+            <h2>Search for a Pokemon!</h2>
+            <input type="text" class="search-bar" id="pokemonName">
+            <button onclick="newPokemon()" id="search">Search</button><br>
+            <div class="details" id="card" style="display: none;">
+                <img src="placeholder.png" alt="Pokémon Sprite" id="pokemonSprite">
+                <div class="type-container" id="typeContainer"></div>
+            </div>
+        </div>
+        <div class="project-explanation">
+            <h3>Feature Explanation</h3>
+            <p>
+                I created a Pokemon search function using the free Pokeapi. 
+                This Api includes a ton of information on every single Pokemon in the game.
+                I used it to fetch a picture of the Pokemon and its types. 
+                I also included a for loop that goes through each type and creates a new div that displays it styled in the color used in the game.
+            </p>
+            <h3>Implementation into Project</h3>
+            <p>
+                The way this search feature works could be very similar to 
+                how the frontend of my website could talk to the backend that contained a database with quiz statistics.
+                This would allow users to search for specific keywords or genres to filter.
+            </p>
+        </div>
+    </main>
+</body>
+</html>
