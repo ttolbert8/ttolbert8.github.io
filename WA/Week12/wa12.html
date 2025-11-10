@@ -1,39 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="wa10.css">
-    <link rel="stylesheet" href="https://use.typekit.net/ghc3ghz.css">
-    <script src="wa10.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emmanuel Christian Center</title>
+  <link rel="stylesheet" href="wa12.css">
+  <link rel="stylesheet" href="https://use.typekit.net/nmq5lgf.css">
+  <script src="wa12.js"></script>
 </head>
 <body>
-    <main>
-        <div class="search-container">
-            <h2>Search for a Pokemon!</h2>
-            <input type="text" class="search-bar" id="pokemonName">
-            <button onclick="newPokemon()" id="search">Search</button><br>
-            <div class="details" id="card" style="display: none;">
-                <img src="placeholder.png" alt="Pokémon Sprite" id="pokemonSprite">
-                <div class="type-container" id="typeContainer"></div>
-            </div>
+  <!-- ==== NAV BAR ==== -->
+  <nav class="navbar">
+    <div class="nav-menu">
+      <h1 class="nav-logo">Emmanuel Christian Center</h1>
+      <ul class="nav-list">
+        <li><a class="nav-button" href="https://www.emmanuelchristiancenter.net/conf---hotel-accommodations.html">Local Food Banks</a></li>
+        <li><a class="nav-button" href="https://www.emmanuelchristiancenter.net/outreach.html">Outreach</a></li>
+        <li><a class="nav-button" href="https://www.emmanuelchristiancenter.net/book-store.html">Book Store</a></li>
+        <li><a class="nav-button" href="https://app.easytithe.com/App/Form/e180a814-e6d2-4acb-804d-34671a8ac711">Become a Member</a></li>
+        <li><a class="nav-button" href="https://app.easytithe.com/App/Form/59779af8-66f6-4ebf-a6de-6c7c35e33a01">Receive Salvation</a></li>
+        <li><a class="nav-button" href="#give-section">Give</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <hr class="divider">
+
+    <!-- ==== HERO SECTION ==== -->
+    <section class="homepage-container">
+      <h2>Welcome to Emmanuel Christian Center</h2>
+      <div class="info-container">
+        <img src="pastor.png" alt="Pastor and First Lady Simpkins" class="pastor-img">
+        <div class="service">
+          <h3>Services:</h3>
+          <p>Sunday 10am</p>
+          <p>Wednesday 7pm</p>
+          <a class="nav-button livestream" href="https://www.facebook.com/eccaurora/">Watch Live</a>
         </div>
-        <div class="project-explanation">
-            <h3>Feature Explanation</h3>
-            <p>
-                I created a Pokemon search function using the free Pokeapi. 
-                This Api includes a ton of information on every single Pokemon in the game.
-                I used it to fetch a picture of the Pokemon and its types. 
-                I also included a for loop that goes through each type and creates a new div that displays it styled in the color used in the game.
-            </p>
-            <h3>Implementation into Project</h3>
-            <p>
-                The way this search feature works could be very similar to 
-                how the frontend of my website could talk to the backend that contained a database with quiz statistics.
-                This would allow users to search for specific keywords or genres to filter.
-            </p>
-        </div>
-    </main>
+      </div>
+    </section>
+
+    <!-- ==== WELCOME MESSAGE ==== -->
+    <section class="welcome-message">
+      <div class="welcome-video">
+        <iframe 
+          src="https://www.youtube.com/embed/gTvlyZRLWYI?si=-c0cApoJag2jIQJS"
+          title="Welcome Video"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="welcome-text">
+        <p>
+          We welcome you to Emmanuel Christian Center and pray that you will be blessed.
+          Join us in building Healthy, Happy, and Holy Families through Christ.  
+          “I am come that they might have life, and that they might have it more abundantly.” — John 10:10
+        </p>
+        <p>
+          You are predestined to overcome in life. Emmanuel Christian Center will equip you with
+          the strength and wisdom to make destiny decisions. This is the place to find God when you need Him most. 
+        </p>
+        <blockquote>
+          “The Lord bless you and keep you; The Lord make His face shine upon you and be gracious to you;
+          The Lord lift up His countenance upon you and give you peace.”  
+          <br>— Numbers 6:24–26
+        </blockquote>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ==== GIVE SECTION ==== -->
+    <section id="give-section" class="give-container">
+      <h2>Tithes & Offerings</h2>
+      <p>
+        Tithing and giving are safe and easy through Easy Tithe. We value your generosity and provide secure options to give online or by text.
+      </p>
+      <a class="give-button" href="https://app.easytithe.com/App/Form/30c5109d-93c6-44df-b15d-3526b058d6d7">Give Online</a>
+      <p>
+        Your contributions help Emmanuel Christian Center continue to expand and bless families nationwide.
+        Thank you for your faithfulness and support of the Kingdom of God.
+      </p>
+    </section>
+
+    <hr class="divider">
+  </main>
+
+  <!-- ==== FOOTER ==== -->
+  <footer class="footer">
+    <p>© 2025 Emmanuel Christian Center | Aurora, IL</p>
+    <p><a href="https://www.facebook.com/eccaurora/">Visit us on Facebook</a></p>
+  </footer>
 </body>
 </html>
