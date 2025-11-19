@@ -156,7 +156,14 @@ h2 {
   max-width: 900px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-
+.message-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 5%;
+}
 .welcome-video iframe {
   width: 100%;
   max-width: 500px;
@@ -179,8 +186,8 @@ h2 {
   margin-top: 1rem;
 }
 
-/* ==== GIVE SECTION ==== */
-.give-container {
+/* ==== CARDS SECTION ==== */
+.card-container {
   text-align: center;
   padding: 2rem 5%;
   background-color: #fff;
@@ -190,7 +197,7 @@ h2 {
   max-width: 900px;
 }
 
-.give-button {
+.card-button {
   display: inline-block;
   background-color: #CF2626;
   color: white;
@@ -202,7 +209,7 @@ h2 {
   margin: 1rem 0;
 }
 
-.give-button:hover {
+.card-button:hover {
   background-color: #a51f1f;
 }
 
