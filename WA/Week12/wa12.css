@@ -146,6 +146,7 @@ h2 {
 .welcome-message {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 2rem;
