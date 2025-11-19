@@ -24,7 +24,6 @@ h2 {
   margin: 3rem auto;
   width: 80%;
 }
-
 /* ==== NAVBAR ==== */
 .navbar {
   background-color: white;
@@ -49,6 +48,7 @@ h2 {
 .nav-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
   margin: 0;
@@ -71,7 +71,46 @@ h2 {
   border-color: #CF2626;
 }
 
+.page-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.sidebar {
+  box-sizing: border-box;
+  height: 100%;
+  width: 250px;
+  padding: 5px 1em;
+  border-right: 1px solid #1a1a1a;
+  display: flex;
+}
+.sidebar ul {
+  list-style: none;
+}
+.ministry {
+  display: block;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+.ministry:hover {
+  background-color: #12355B;
+  color: white;
+  border-color: #12355B;
+}
 /* ==== HOMEPAGE ==== */
+.introduction-container {
+  display: flex;
+  flex-direction: row;
+  margin: 10%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
 .homepage-container {
   display: flex;
   flex-direction: column;
@@ -95,6 +134,14 @@ h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.generator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 5%;
+  text-align: center;
+  max-width: 25%;
+}
 /* ==== WELCOME MESSAGE ==== */
 .welcome-message {
   display: flex;
@@ -106,7 +153,7 @@ h2 {
   background-color: #fff;
   border-radius: 12px;
   margin: 3rem auto;
-  max-width: 1100px;
+  max-width: 900px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
@@ -178,7 +225,7 @@ h2 {
 }
 
 /* ==== RESPONSIVE ==== */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav-list {
     flex-wrap: wrap;
     justify-content: center;
