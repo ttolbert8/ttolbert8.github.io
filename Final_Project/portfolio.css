@@ -1,0 +1,323 @@
+html, body {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  background-color: #F9FAFD;
+}
+
+h1, h2, h3 {
+  font-family: "futura-pt", sans-serif;
+  text-align: center;
+  color: #605856;  
+}
+
+h2 {
+  color: #605856;
+  margin-bottom: 1rem;
+}
+
+/* ==== NAVBAR ==== */
+.navContainer {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .1rem 5%;
+}
+
+.navLogo {
+  font-size: 3rem;
+  color: #48A9A6;
+  font-family: black-pack-vf, sans-serif;
+  font-variation-settings: "STRS" 0, "wdth" 50, "wght" 900;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navButton {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #B4B8C5;
+  color: white;
+  border-color: #B4B8C5;
+}
+
+/* ==== ABOUT SECTION ==== */
+
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.aboutMessageContainer {
+    padding-right: 1%;
+}
+.aboutImage {
+  width: 100%;
+  max-width: 300px;
+  min-width: 300px; 
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  display: block;    
+  margin: auto;  
+}
+.aboutTitle {
+    text-align: left;
+}
+
+/* ==== SKILLS SECTION ==== */
+.skillContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background-color: #fff;
+    border-radius: 1em;
+    gap: 1em;
+    padding: 3em;
+}
+.skill {
+    display: flex;
+    max-width: 200px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.skill:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 1em;
+    transform: scale(1.05);
+}
+.skill_icon {
+    max-width: 100px;
+    height: auto;
+}
+/* ==== EXPERIENCE ==== */
+.experienceActive {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background-color: #fff;
+    border-radius: 1em;
+    padding: 1em;
+
+}
+.experienceHeader {
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    align-content: center;
+    gap: 1em;
+
+}
+.experienceHeader:hover .experienceToggle{
+    color: #48A9A6;
+    transform: scale(1.05);
+}
+.experienceHeaderText {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.experienceLogo {
+    max-width: auto;
+    height: auto;
+    border-radius: 1em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+#experiencePosition {
+    color: #48A9A6;
+}
+#experienceDate {
+    font-size: 8pt;
+}
+.experienceToggle {
+    font-size: 28pt;
+    background-color: #fff;
+    border: none;
+    transition: .2s ease-in-out;
+    height: 15%;
+    align-self: center;
+}
+
+.experienceDescription {
+    display: flex;
+    flex-direction: row;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 2%;
+}
+
+.experienceActive.active .experienceDescription {
+    max-height: 1000px;
+    padding: 2%;
+}
+
+.experienceToggle .bx-chevron-down {
+    display: none;
+}
+
+.experienceActive.active .bx-chevron-right {
+    display: none;
+}
+
+.experienceActive.active .bx-chevron-down {
+    display: inline;
+}
+
+.experiencePicture {
+    max-width: 300px;
+    height: auto;
+    border-radius: 1em;
+}
+.experienceCopy {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    list-style: none;
+    text-align: center;
+}
+.experienceCopy li:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: .5em;
+}
+/* ==== INTERESTS ==== */
+.interestsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 3em;
+}
+.interestsCardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    text-align: center;
+}
+.interestsCard {
+    background-color: #fff;
+    border-radius: 1em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 1em;
+}
+.interestsCard:hover {
+    transform: scale(1.05);
+}
+#interestsIcon {
+    font-size: 28pt;
+    color: #48A9A6;
+}
+.songContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+#songs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    align-content: center;
+    justify-content: center;
+}
+.song{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    gap: .5em;
+    border-radius: 1em;
+}
+.song:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: scale(1.05);
+
+}
+.songInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-content: left;
+    padding: 5%;
+    padding-top: 0%;
+}
+.songArt {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+    align-self: center;
+}
+
+.spinning:hover {
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+}
+
+.songArtist {
+  color: #555;
+  font-size: 0.9em;
+}
+/* ==== FOOTER ==== */
+
+.contactContainer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #48A9A6;
+    margin-top: 4rem;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.contactText {
+    color: #fff;
+}
+.linkedIn {
+    text-decoration: none;
+    color: #fff;
+}
