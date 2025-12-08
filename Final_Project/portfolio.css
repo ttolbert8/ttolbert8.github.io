@@ -286,6 +286,10 @@ h2 {
     box-shadow: 0 0 6px rgba(0,0,0,0.3);
     align-self: center;
 }
+.songDisclaimer {
+    align-self: center;
+    font-size: 8pt;
+}
 
 .spinning:hover {
     animation: spin 8s linear infinite;
