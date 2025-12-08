@@ -21,6 +21,7 @@ h2 {
 /* ==== NAVBAR ==== */
 .navContainer {
   background-color: white;
+  width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
@@ -105,6 +106,8 @@ h2 {
     border-radius: 1em;
     gap: 1em;
     padding: 3em;
+    overflow: auto;
+    white-space: nowrap;
 }
 .skill {
     display: flex;
@@ -325,3 +328,37 @@ h2 {
     text-decoration: none;
     color: #fff;
 }
+
+/* ==== Responsive Setting ==== */
+
+@media screen and (max-width: 1300px) {
+/* ==== About Section ==== */    
+.aboutContainer {
+    flex-direction: column;
+}
+.aboutMessageContainer {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.aboutImage {
+    margin-top: 1em;
+}
+/* ==== Skills ==== */
+.skillIcon {
+    max-width: 100%;
+}
+}
+
+/* ==== Experiences ==== */
+.experienceDescription {
+    flex-direction: column;
+}
+.experienceCopy {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+.experiencePicture {
+    justify-self: center;
+    align-self: center;
+}
+/* ==== Interests ==== */
