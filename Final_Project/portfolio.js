@@ -1,14 +1,40 @@
 // Experience Button Toggle
 
-const toggles = document.querySelectorAll(".experienceHeader");
+const experienceToggles = document.querySelectorAll(".experienceHeader");
 
-toggles.forEach((btn) => {
+experienceToggles.forEach((btn) => {
   btn.addEventListener("click", () => {
     const container = btn.closest(".experienceActive");
     container.classList.toggle("active");
   });
 });
 
+// Interest Button Toggle
+const interestToggles = document.querySelectorAll(".interestsHeader");
+
+interestToggles.forEach((button) => {
+  button.addEventListener("click", () => {
+
+    const container = button.closest(".interestsCard");
+    container.classList.toggle("expanded");
+  });
+});
+
+// Responsive Navigation
+const navButton = document.querySelector("#navToggle");
+const navButtonClose = document.querySelector("#navToggleClose");
+const mobileContainer = document.querySelector(".navMobileContainer");
+const desktopContainer = document.querySelector(".navContainer");
+
+navButton.addEventListener("click", () => {
+  mobileContainer.classList.toggle("mobile");
+  desktopContainer.classList.toggle("mobile");
+});
+
+navButtonClose.addEventListener("click", () => {
+  mobileContainer.classList.remove("mobile");
+  desktopContainer.classList.remove("mobile");
+});
 // Displays Most Recent Track Player
 
 const USER = "ttolbert8";

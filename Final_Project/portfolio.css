@@ -17,11 +17,14 @@ h2 {
   color: #605856;
   margin-bottom: 1rem;
 }
+#header {
+    font-family: "mazurquica-vf", sans-serif;
+    font-variation-settings: "wght" 900;
+}
 
 /* ==== NAVBAR ==== */
 .navContainer {
   background-color: white;
-  width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
@@ -38,7 +41,10 @@ h2 {
   font-family: black-pack-vf, sans-serif;
   font-variation-settings: "STRS" 0, "wdth" 50, "wght" 900;
 }
-
+.navLogo a, .navLogo a:visited {
+    text-decoration: none;
+    color: #48A9A6;
+}
 .navList {
   list-style: none;
   display: flex;
@@ -63,7 +69,48 @@ h2 {
   color: white;
   border-color: #B4B8C5;
 }
+#navToggle {
+    display: none;
+}
+    /* ==== MOBILE CSS ==== */
+.navContainer.mobile {
+    display: none;
+}
 
+.navMobileContainer {
+position: fixed;
+top: 0;
+right: 0;
+width: 250px;
+z-index: 999;
+display: none;
+flex-direction: column;
+justify-content: flex-start;
+align-content: flex-start;
+height: 100%;
+gap: 1em;
+background-color: rgba(255, 255, 255, 0.26);
+box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+backdrop-filter: blur(10px);
+}
+.navMobileContainer.mobile {
+    display: flex;
+}
+.navMobileList {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    gap: 2em;
+    height: 100%;
+}
+.navButton {
+    gap: 3em;
+}
+#navToggleClose {
+    display: block;
+    font-size: 36pt;
+}
 /* ==== ABOUT SECTION ==== */
 
 .aboutContainer {
@@ -83,7 +130,6 @@ h2 {
 .aboutImage {
   width: 100%;
   max-width: 300px;
-  min-width: 300px; 
   height: auto;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   border-radius: 12px;
@@ -180,7 +226,7 @@ h2 {
     flex-direction: row;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.4s ease-in-out;
     padding: 0 2%;
 }
 
@@ -230,12 +276,21 @@ h2 {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2em;
     text-align: center;
+    align-items: start;
+    grid-auto-rows: min-content;
 }
 .interestsCard {
     background-color: #fff;
     border-radius: 1em;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     padding: 1em;
+    min-height: 175px;
+    height: fit-content;
+}
+.interestsHeader {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
 .interestsCard:hover {
     transform: scale(1.05);
@@ -243,6 +298,33 @@ h2 {
 #interestsIcon {
     font-size: 28pt;
     color: #48A9A6;
+}
+.interestsToggleButton {
+    font-size: 24pt;
+    background-color: #fff;
+    border: none;
+}
+.interestsContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: .2s ease-in-out ;}
+
+.interestsCard.expanded .interestsContent {
+    max-height: 500px;
+    padding-top: 0.5em; 
+    padding-bottom: 0.5em;
+}
+
+.interestsToggleButton .toggle-up {
+    display: none;
+}
+
+.interestsCard.expanded .interestsToggleButton .toggle-up {
+    display: inline;
+}
+
+.interestsCard.expanded .interestsToggleButton .toggle-down {
+    display: none;
 }
 .songContainer {
     display: flex;
@@ -267,6 +349,8 @@ h2 {
     margin-bottom: 1em;
     gap: .5em;
     border-radius: 1em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
 }
 .song:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -278,8 +362,29 @@ h2 {
     flex-direction: column;
     justify-content: left;
     align-content: left;
+    text-align: center;
     padding: 5%;
     padding-top: 0%;
+    padding-bottom: 0%;
+    background-color: #48A9A6;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+.songTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    position: relative;
+}
+.songArtist {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    font-size: 0.9em;
 }
 .songArt {
     width: 5em;
@@ -290,6 +395,7 @@ h2 {
     align-self: center;
 }
 .songDisclaimer {
+    text-align: center;
     align-self: center;
     font-size: 8pt;
 }
@@ -306,11 +412,6 @@ h2 {
     transform: rotate(360deg);
     }
 }
-
-.songArtist {
-  color: #555;
-  font-size: 0.9em;
-}
 /* ==== FOOTER ==== */
 
 .contactContainer {
@@ -324,41 +425,122 @@ h2 {
 .contactText {
     color: #fff;
 }
-.linkedIn {
+.contactContainer a, .contactContainer a:visited {
     text-decoration: none;
     color: #fff;
 }
-
+.contactContainer a:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+.contactCopy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
 /* ==== Responsive Setting ==== */
 
 @media screen and (max-width: 1300px) {
-/* ==== About Section ==== */    
-.aboutContainer {
-    flex-direction: column;
-}
-.aboutMessageContainer {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-.aboutImage {
-    margin-top: 1em;
-}
-/* ==== Skills ==== */
-.skillIcon {
-    max-width: 100%;
-}
-}
+    /* ==== NAV BAR ==== */
+    .navContainer {
+        width: 100%;
+        position: fixed;
+        padding-right: 5%;
+        box-sizing: border-box;
+    }
+    #navToggle {
+        display: block;
+        font-size: 36pt;
+    }
+    #navToggleClose {
+        display: block;
+        font-size: 36pt;
+    }
+    .navList {
+        display: none;
+    }
+    /* ==== About Section ==== */    
+    .aboutContainer {
+        flex-direction: column;
+        margin-top: 10%;
+    }
+    .aboutMessageContainer {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .aboutImage {
+        margin-top: 1em;
+    }
 
-/* ==== Experiences ==== */
-.experienceDescription {
-    flex-direction: column;
+    /* ==== Skills ==== */
+    .skillIcon {
+        max-width: 100%;
+    }
+
+    .skill:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border-radius: 1em;
+        transform: scale(1.05);
+    }
+    /* ==== Experiences ==== */
+    .experienceDescription {
+        flex-direction: column;
+    }
+    .experienceCopy {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .experiencePicture {
+        justify-self: center;
+        align-self: center;
+    }
+    #songs {
+        align-items: stretch;
+    }
+    .songInformation {
+        align-self: stretch;
+    }
 }
-.experienceCopy {
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
+@media screen and (max-width: 1000px) {
+    /* ==== Interests ==== */
+    .songContainer {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    #songs {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .song {
+        height: fit-content;
+    }
+    .interestsCardContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
-.experiencePicture {
-    justify-self: center;
-    align-self: center;
+@media screen and (max-width: 500px) {
+    /* Makes Nav menu full screen at certain size */
+    .navMobileContainer {
+        width: 100%;
+    } 
+    /* ==== EXPERIENCES ==== */
+    .experienceHeader {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "logo button"
+        "title title";
+    }
+    .experienceLogo {
+        grid-area: logo;
+    }
+    .experienceToggle {
+        grid-area: button;
+    }
+    .experienceHeaderText {
+        grid-area: title;
+    }
 }
-/* ==== Interests ==== */
