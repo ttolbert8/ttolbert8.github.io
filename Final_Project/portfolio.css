@@ -17,7 +17,7 @@ h2 {
   color: #605856;
   margin-bottom: 1rem;
 }
-#header {
+.header {
     font-family: "mazurquica-vf", sans-serif;
     font-variation-settings: "wght" 900;
 }
@@ -68,6 +68,10 @@ h2 {
   background-color: #B4B8C5;
   color: white;
   border-color: #B4B8C5;
+}
+.navToggleContainer {
+    border: none;
+    background-color: transparent;
 }
 #navToggle {
     display: none;
@@ -206,10 +210,10 @@ backdrop-filter: blur(10px);
     border-radius: 1em;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-#experiencePosition {
+.experiencePosition {
     color: #48A9A6;
 }
-#experienceDate {
+.experienceDate {
     font-size: 8pt;
 }
 .experienceToggle {
@@ -295,7 +299,7 @@ backdrop-filter: blur(10px);
 .interestsCard:hover {
     transform: scale(1.05);
 }
-#interestsIcon {
+.interestsIcon {
     font-size: 28pt;
     color: #48A9A6;
 }
